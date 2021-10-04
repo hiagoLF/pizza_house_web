@@ -24,6 +24,8 @@ export const FoodItemComponent = styled.div`
       font-size: 18px;
       margin-bottom: 5px;
       display: flex;
+      text-align: left;
+
 
       img {
         width: 24px;

@@ -1,6 +1,6 @@
 import React from "react";
 import { FoodItemComponent } from "./styles";
-import cartIcon from '../../assets/icons/shop_cart.png'
+import cartIcon from "../../assets/icons/shop_cart.png";
 import StatusToast from "../StatusToast";
 
 const image =
@@ -10,9 +10,14 @@ export type FoodItemProps = {
   title: string;
   description: string;
   price: string;
-  status?: "cart" | "row" | "preparing" | "delivered" | "canceled";
+  status?:
+    | "cart"
+    | "row"
+    | "preparing"
+    | "delivered"
+    | "canceled"
+    | "justDelete";
 };
-
 
 const FoodItem: React.FC<FoodItemProps> = ({
   title,
@@ -27,12 +32,8 @@ const FoodItem: React.FC<FoodItemProps> = ({
       <div id="texts">
         <h3>
           {title}
-          {status === 'cart' && (
-            <img src={cartIcon} alt="No carrinho" />
-          )}
-          {(status !== 'cart' || status)  && (
-            <StatusToast status={status}/>
-          )}
+          {status === "cart" && <img src={cartIcon} alt="No carrinho" />}
+          {(status !== "cart" || status) && <StatusToast status={status} />}
         </h3>
 
         <div id="description">{description}</div>

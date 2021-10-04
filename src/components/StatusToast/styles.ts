@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
 type StatusToastContainerProps = {
-  status?: "cart" | "row" | "preparing" | "delivered" | "canceled";
+  status?:
+    | "cart"
+    | "row"
+    | "preparing"
+    | "delivered"
+    | "canceled"
+    | "justDelete";
 };
 
 export const StatusToastContainer = styled.div<StatusToastContainerProps>`

@@ -1,9 +1,15 @@
 import React from "react";
 import { StatusToastContainer } from "./styles";
-import cancelRedButton from '../../assets/icons/cancel.png'
+import cancelRedButton from "../../assets/icons/cancel.png";
 
 export type StatusToastProps = {
-  status?: "cart" | "row" | "preparing" | "delivered" | "canceled";
+  status?:
+    | "cart"
+    | "row"
+    | "preparing"
+    | "delivered"
+    | "canceled"
+    | "justDelete";
 };
 
 const StatusToast: React.FC<StatusToastProps> = ({ status }) => {
@@ -16,9 +22,7 @@ const StatusToast: React.FC<StatusToastProps> = ({ status }) => {
         {status === "canceled" && "Cancelado"}
       </div>
 
-      {status === 'row' && (
-        <img src={cancelRedButton} alt='Cancelar' />
-      )}
+      {(status === "row" || status === 'justDelete') && <img src={cancelRedButton} alt="Cancelar" />}
     </StatusToastContainer>
   );
 };
