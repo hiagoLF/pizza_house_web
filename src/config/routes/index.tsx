@@ -7,6 +7,7 @@ import FoodsRequestsPages from "../../pages/FoodsRequests";
 import PendingOrdersPage from "../../pages/PendingOrders";
 import ConfirmedOrdersPage from "../../pages/ConfirmedOrders";
 import ClientsPage from "../../pages/ClientsPage";
+import ClientBillPage from '../../pages/ClientBillPage'
 
 const Routes: React.FC = () => {
   return (
@@ -19,7 +20,8 @@ const Routes: React.FC = () => {
         <Route path="/food/requests" component={FoodsRequestsPages} />
         <Route path="/adm/orders/pending" component={PendingOrdersPage} />
         <Route path="/adm/orders/confirmed" component={ConfirmedOrdersPage} />
-        <Route path="/adm/clients" component={ClientsPage} />
+        <Route path="/adm/clients" exact component={ClientsPage} />
+        <Route path="/adm/clients/bill" component={ClientBillPage} />
       </Switch>
     </Router>
   );
