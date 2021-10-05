@@ -1,16 +1,25 @@
 import whiteRightArrowIcon from "../../assets/icons/arrow_right_white.png";
 import { BottomCardContainer } from "./styles";
 
-const BottomCard: React.FC = () => {
-  return (
-    <BottomCardContainer>
-      <div id="bottom-card-content">
-        <h2>Carrinho</h2>
+type BottomCardType = {
+  title?: string;
+  detail?: string;
+  nextIcon?: boolean;
+  onClick?: () => void
+};
 
-        <div id="next">
-          <span>2 ítens</span>
-          <img src={whiteRightArrowIcon} alt="next" />
-        </div>
+const BottomCard: React.FC<BottomCardType> = ({ title, detail, nextIcon, onClick }) => {
+  return (
+    <BottomCardContainer onClick={onClick}>
+      <div id="bottom-card-content">
+        {title && <h2>{title}</h2>}
+
+        {(detail || nextIcon) && (
+          <div id="next">
+            <span>{detail}</span>
+            {nextIcon && <img src={whiteRightArrowIcon} alt="next" />}
+          </div>
+        )}
       </div>
     </BottomCardContainer>
   );

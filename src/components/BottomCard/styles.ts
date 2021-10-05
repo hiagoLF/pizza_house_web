@@ -18,6 +18,7 @@ export const BottomCardContainer = styled.div`
 
     h2 {
       font-size: 24px;
+      font-weight: 100;
     }
 
     #next {
@@ -25,6 +26,8 @@ export const BottomCardContainer = styled.div`
 
       span {
         font-size: 18px;
+        font-weight: 100;
+
       }
     }
   }

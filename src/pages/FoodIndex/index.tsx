@@ -6,11 +6,11 @@ import { FoodIndexContainer } from "./styles";
 const FoodIndex: React.FC = () => {
   return (
     <FoodIndexContainer>
-      <UserHeader/>
+      <UserHeader />
 
       <Foods />
 
-      <BottomCard />
+      <BottomCard title="Carrinho" nextIcon={true} detail="2 ítens" />
     </FoodIndexContainer>
   );
 };
