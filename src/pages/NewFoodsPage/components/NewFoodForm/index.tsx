@@ -1,5 +1,6 @@
 import React from "react";
 import BottomCard from "../../../../components/BottomCard";
+import FoodImageInput from "../../../../components/FoodImageInput";
 import FoodInput from "../../../../components/FoodInput";
 import FoodsSelect from "../../../../components/FoodsSelect";
 
@@ -15,6 +16,8 @@ const NewFoodForm: React.FC = () => {
       <FoodInput title='Descrição' placeholder='Conte sobre...' multiline={true}/>
 
       <FoodInput title='Valor' placeholder='R$ 00,00'/>
+
+      <FoodImageInput />
 
       <BottomCard title='Enviar'/>
     </NewFoodFormContainer>

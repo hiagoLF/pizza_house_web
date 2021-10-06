@@ -10,6 +10,8 @@ import ClientsPage from "../../pages/ClientsPage";
 import ClientBillPage from "../../pages/ClientBillPage";
 import AdmFoodsPage from "../../pages/AdmFoods";
 import NewFoodsPage from "../../pages/NewFoodsPage";
+import EmployeesPage from '../../pages/Employees'
+
 
 const Routes: React.FC = () => {
   return (
@@ -26,6 +28,7 @@ const Routes: React.FC = () => {
         <Route path="/adm/clients/bill" component={ClientBillPage} />
         <Route path="/adm/foods" exact component={AdmFoodsPage} />
         <Route path="/adm/foods/new" component={NewFoodsPage} />
+        <Route path="/adm/employees" component={EmployeesPage} />
       </Switch>
     </Router>
   );
