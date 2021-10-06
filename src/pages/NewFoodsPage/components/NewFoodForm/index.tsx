@@ -1,34 +1,22 @@
 import React from "react";
+import BottomCard from "../../../../components/BottomCard";
+import FoodInput from "../../../../components/FoodInput";
+import FoodsSelect from "../../../../components/FoodsSelect";
 
 import { NewFoodFormContainer } from "./styles";
 
 const NewFoodForm: React.FC = () => {
   return (
     <NewFoodFormContainer>
-      <div className="form-field">
-        <label htmlFor="type">Tipo</label>
-        <span>...</span>
-      </div>
+      <FoodsSelect />
 
-      <div className="form-field">
-        <label htmlFor="name">Name</label>
-        <span>...</span>
-      </div>
+      <FoodInput title='Nome' placeholder='Refeição'/>
 
-      <div className="form-field">
-        <label htmlFor="description">Descrição</label>
-        <span>...</span>
-      </div>
+      <FoodInput title='Descrição' placeholder='Conte sobre...' multiline={true}/>
 
-      <div className="form-field">
-        <label htmlFor="price">Valor</label>
-        <span>...</span>
-      </div>
+      <FoodInput title='Valor' placeholder='R$ 00,00'/>
 
-      <div className="form-field">
-        <label htmlFor="image">Imagem</label>
-        <span>...</span>
-      </div>
+      <BottomCard title='Enviar'/>
     </NewFoodFormContainer>
   );
 };

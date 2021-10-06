@@ -5,6 +5,6 @@ export const NewFoodFormContainer = styled.form`
   flex: 1;
   display: flex;
   justify-content: flex-start;
-
+  overflow-y: scroll;
   flex-direction: column;
 `;
