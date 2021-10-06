@@ -7,7 +7,9 @@ import FoodsRequestsPages from "../../pages/FoodsRequests";
 import PendingOrdersPage from "../../pages/PendingOrders";
 import ConfirmedOrdersPage from "../../pages/ConfirmedOrders";
 import ClientsPage from "../../pages/ClientsPage";
-import ClientBillPage from '../../pages/ClientBillPage'
+import ClientBillPage from "../../pages/ClientBillPage";
+import AdmFoodsPage from "../../pages/AdmFoods";
+import NewFoodsPage from "../../pages/NewFoodsPage";
 
 const Routes: React.FC = () => {
   return (
@@ -22,6 +24,8 @@ const Routes: React.FC = () => {
         <Route path="/adm/orders/confirmed" component={ConfirmedOrdersPage} />
         <Route path="/adm/clients" exact component={ClientsPage} />
         <Route path="/adm/clients/bill" component={ClientBillPage} />
+        <Route path="/adm/foods" exact component={AdmFoodsPage} />
+        <Route path="/adm/foods/new" component={NewFoodsPage} />
       </Switch>
     </Router>
   );

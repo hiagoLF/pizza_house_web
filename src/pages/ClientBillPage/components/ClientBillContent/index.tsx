@@ -52,10 +52,10 @@ const ClientBillContent: React.FC = () => {
         <div className="bill-item" key={index}>
           <div id="texts">
             <h3>
-              {bill.type === "pizza" && "Piz"}
-              {bill.type === "portion" && "Porç"}
-              {bill.type === "soda" && "Beb"}
-              {bill.type === "dessert" && "Sob"}
+              {bill.type === "pizza" && "Piz "}
+              {bill.type === "portion" && "Porç "}
+              {bill.type === "soda" && "Beb "}
+              {bill.type === "dessert" && "Sob "}
               {bill.name}
             </h3>
             <span>R$ {bill.price}</span>
